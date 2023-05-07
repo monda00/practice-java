@@ -1,0 +1,18 @@
+version: "3"
+services:
+  spring-boot:
+    image: sample-api-spring-boot
+    ports:
+      - "8080:8080"
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: ItemDB
+      MYSQL_USER: spring-boot-user
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./mysql/db:/var/lib/mysql
+    restart: always
