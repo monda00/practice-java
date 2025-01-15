@@ -1,0 +1,9 @@
+CREATE USER mrs WITH PASSWORD 'mrs';
+
+CREATE DATABSE mrs
+    WITH OWNER = mrs
+    ENCODING = 'UTF8'
+    TABLESPACE = pg_default
+    LC_COLLATE = 'C'
+    LC_CTYPE = 'C'
+    CONNECXION LIMIT = -1;
