@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS meeting_room (
 CREATE TABLE IF NOT EXISTS reservable_room (
   reserved_date DATE NOT NULL,
   room_id INT4 NOT NULL,
-  PRIMARY KEY (reserved_date, room_id),
+  PRIMARY KEY (reserved_date, room_id)
 );
 
 CREATE TABLE IF NOT EXISTS reservation (
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS reservation (
   reserved_date DATE NOT NULL,
   room_id INT4 NOT NULL,
   user_id VARCHAR(255) NOT NULL,
-  PRIMARY KEY (reservation_id),
+  PRIMARY KEY (reservation_id)
 );
 
 CREATE TABLE IF NOT EXISTS usr (
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS usr (
   last_name VARCHAR(255) NOT NULL,
   password VARCHAR(255) NOT NULL,
   role_name VARCHAR(255) NOT NULL,
-  PRIMARY KEY (user_id),
+  PRIMARY KEY (user_id)
 );
 
 ALTER TABLE reservable_room DROP CONSTRAINT IF EXISTS FK_reservable_room_meeting_room;

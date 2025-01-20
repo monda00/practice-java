@@ -22,7 +22,7 @@ public class Reservation implements Serializable {
   private LocalTime endTime;
 
   @ManyToOne
-  @JoinColumns({ @JoinColumn(name = "reserved_date"), @JoinColumn(name = "roomId") })
+  @JoinColumns({ @JoinColumn(name = "reserved_date"), @JoinColumn(name = "room_id") })
   private ReservableRoom reservableRoom;
 
   @ManyToOne
@@ -51,7 +51,7 @@ public class Reservation implements Serializable {
     return endTime;
   }
 
-  public void seEndTime(LocalTime endTime) {
+  public void setEndTime(LocalTime endTime) {
     this.endTime = endTime;
   }
 }
