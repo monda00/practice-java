@@ -3,7 +3,7 @@ package mrs.domain.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class ReservableRoomId implements Serializable {

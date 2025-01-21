@@ -10,13 +10,13 @@ INSERT INTO meeting_room (room_name) VALUES ('Room H');
 
 -- reservable room
 -- room 1
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-01', 1);
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-02', 1);
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-03', 1);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-21', 1);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-22', 1);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-23', 1);
 -- room 7
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-01', 7);
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-02', 7);
-INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2020-01-03', 7);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-21', 7);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-22', 7);
+INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-23', 7);
 
 -- dummy user
 INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user1', 'user', 'one', 'password', 'USER');

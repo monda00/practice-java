@@ -24,16 +24,26 @@ public class RoomsController {
   @GetMapping
   String listRooms(Model model) {
     LocalDate today = LocalDate.now();
+    System.out.println("today: " + today);
     List<ReservableRoom> rooms = roomService.findReservableRooms(today);
+    for (ReservableRoom room : rooms) {
+      System.out.println("room: " + room.getReservableRoomId());
+    }
     model.addAttribute("date", today);
     model.addAttribute("rooms", rooms);
     return "room/listRooms";
   }
 
   @GetMapping("{date}")
-  String listRooms(@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @PathVariable("date") LocalDate date, Model model) {
-      LocalDate today = LocalDate.now();
-      model.addAttribute("date", today);
-      return listRooms(today, model);
+  String listRooms(
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) @PathVariable("date") LocalDate date, Model model) {
+      System.out.println("date: " + date);
+      List<ReservableRoom> rooms = roomService.findReservableRooms(date);
+      for (ReservableRoom room : rooms) {
+        System.out.println("room: " + room.getReservableRoomId());
+      }
+      model.addAttribute("date", date);
+      model.addAttribute("rooms", rooms);
+      return "room/listRooms";
     }
 }
