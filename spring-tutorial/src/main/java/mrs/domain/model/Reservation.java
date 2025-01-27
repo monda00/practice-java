@@ -2,6 +2,7 @@ package mrs.domain.model;
 
 import java.io.Serializable;
 import java.time.LocalTime;
+import java.util.Objects;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,6 +30,16 @@ public class Reservation implements Serializable {
   @JoinColumn(name = "user_id")
   private User user;
 
+  public boolean overlap(Reservation target) {
+    if (!Objects.equals(reservableRoom.getReservableRoomId(), target.reservableRoom.getReservableRoomId())) {
+      return false;
+    }
+    if (startTime.equals(target.startTime) && endTime.equals(target.endTime)) {
+      return true;
+    }
+    return target.endTime.isAfter(startTime) && endTime.isAfter(target.startTime);
+  }
+
   // getter, setter
 
   public Integer getReservationId() {
@@ -53,5 +64,21 @@ public class Reservation implements Serializable {
 
   public void setEndTime(LocalTime endTime) {
     this.endTime = endTime;
+  }
+
+  public ReservableRoom getReservableRoom() {
+    return reservableRoom;
+  }
+
+  public void setReservableRoom(ReservableRoom reservableRoom) {
+    this.reservableRoom = reservableRoom;
+  }
+
+  public User getUser() {
+    return this.user;
+  }
+
+  public void setUser(User user) {
+    this.user = user;
   }
 }
