@@ -19,7 +19,7 @@ INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-22', 7);
 INSERT INTO reservable_room (reserved_date, room_id) VALUES ('2025-01-23', 7);
 
 -- dummy user
-INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user1', 'user', 'one', 'password', 'USER');
-INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user2', 'user', 'two', 'password', 'USER');
-INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user3', 'user', 'three', 'password', 'USER');
-INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('admin', 'admin', 'admin', 'password', 'ADMIN');
+INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user1', 'user', 'one', '$2a$10$oxSJl.keBwxmsMLkcT9lPeAIxfNTPNQxpeywMrF7A3kVszwUTqfTK', 'USER');
+INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user2', 'user', 'two', '$2a$10$oxSJl.keBwxmsMLkcT9lPeAIxfNTPNQxpeywMrF7A3kVszwUTqfTK', 'USER');
+INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('user3', 'user', 'three', '$2a$10$oxSJl.keBwxmsMLkcT9lPeAIxfNTPNQxpeywMrF7A3kVszwUTqfTK', 'USER');
+INSERT INTO usr (user_id, first_name, last_name, password, role_name) VALUES ('admin', 'admin', 'admin', '$2a$10$oxSJl.keBwxmsMLkcT9lPeAIxfNTPNQxpeywMrF7A3kVszwUTqfTK', 'ADMIN');
